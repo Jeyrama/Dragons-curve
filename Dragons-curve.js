@@ -33,7 +33,7 @@ All other case should return the empty string: ''.
 Dragon = function(n) {
   if(~~n!==n || !(n > -1)) return '';
   
-  var ret = 'Fa',
+  let ret = 'Fa',
       match = /[ab]/g,
       rep = {
         a: 'aRbFR',
