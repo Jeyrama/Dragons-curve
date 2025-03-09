@@ -46,3 +46,5 @@ Dragon = function(n) {
   
   return ret.replace(match, '');
 }
+
+// or
