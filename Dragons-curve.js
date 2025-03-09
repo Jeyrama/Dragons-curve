@@ -29,3 +29,20 @@ All other case should return the empty string: ''.
 
 
 // Solution
+
+Dragon = function(n) {
+  if(~~n!==n || !(n > -1)) return '';
+  
+  var ret = 'Fa',
+      match = /[ab]/g,
+      rep = {
+        a: 'aRbFR',
+        b: 'LFaLb'
+      };
+  
+  while(n --> 0) {
+    ret = ret.replace(match, function(s){ return rep[s] });
+  }
+  
+  return ret.replace(match, '');
+}
