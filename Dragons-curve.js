@@ -48,3 +48,11 @@ Dragon = function(n) {
 }
 
 // or
+
+function Dragon(n,str) {
+  str = str || 'Fa'
+  if(~~n != n || n < 0) return ''
+  if(n === 0) return str.replace(/[ab]/g, '')
+  str = str.replace(/a/g, 'aR_FR').replace(/b/g, 'LFaLb').replace(/_/g, 'b')
+  return Dragon(n-1, str)
+}
